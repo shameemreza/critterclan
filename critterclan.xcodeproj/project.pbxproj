@@ -52,6 +52,7 @@
 		BFDB0662265D700F0014E74F /* HeadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB0661265D700F0014E74F /* HeadingView.swift */; };
 		BFDB0664265D72110014E74F /* InsetGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB0663265D72110014E74F /* InsetGalleryView.swift */; };
 		BFDB0666265D76940014E74F /* InsetFactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDB0665265D76940014E74F /* InsetFactView.swift */; };
+		E53AF6122AB2313400AA8641 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53AF6112AB2313400AA8641 /* Favorites.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +129,7 @@
 		BFDB0661265D700F0014E74F /* HeadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadingView.swift; sourceTree = "<group>"; };
 		BFDB0663265D72110014E74F /* InsetGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetGalleryView.swift; sourceTree = "<group>"; };
 		BFDB0665265D76940014E74F /* InsetFactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetFactView.swift; sourceTree = "<group>"; };
+		E53AF6112AB2313400AA8641 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -279,6 +281,7 @@
 				BFDB0656265D4E8F0014E74F /* CoverImageModel.swift */,
 				BFDB065D265D63D30014E74F /* AnimalModel.swift */,
 				BF452130265F83E5009CF3E4 /* VideoModel.swift */,
+				E53AF6112AB2313400AA8641 /* Favorites.swift */,
 				BF452139265FB6F6009CF3E4 /* LocationModel.swift */,
 			);
 			path = Model;
@@ -429,6 +432,7 @@
 				BFDB064F265D49690014E74F /* GalleryView.swift in Sources */,
 				BFDB0662265D700F0014E74F /* HeadingView.swift in Sources */,
 				BF45213C265FBCAC009CF3E4 /* MapAnnotationView.swift in Sources */,
+				E53AF6122AB2313400AA8641 /* Favorites.swift in Sources */,
 				BF452131265F83E5009CF3E4 /* VideoModel.swift in Sources */,
 				BF452135265F8C2B009CF3E4 /* VideoPlayerView.swift in Sources */,
 			);

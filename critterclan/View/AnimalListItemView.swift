@@ -29,11 +29,12 @@ struct AnimalListItemView: View {
                 
                 Text(animal.headline)
                     .font(.footnote)
-                    .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                    .multilineTextAlignment(.leading)
                     .lineLimit(/*@START_MENU_TOKEN@*/2/*@END_MENU_TOKEN@*/)
                     .padding(.trailing, 8)
             } //: VSTACK
-        } //: HSTACK
+        }
+        //: HSTACK
     }
 }
 

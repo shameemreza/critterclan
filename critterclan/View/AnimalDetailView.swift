@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+
 struct AnimalDetailView: View {
     //MARK: - PROPERTIES
-    
+    @State private var isAnimating = false
+    @EnvironmentObject var favorites: Favorites
     let animal: Animal
     
     // MARK: - BODY
@@ -20,6 +22,8 @@ struct AnimalDetailView: View {
                 Image(animal.image)
                     .resizable()
                     .scaledToFit()
+                    
+                
                 // TITLE
                 Text(animal.name.uppercased())
                     .font(.largeTitle)
@@ -82,20 +86,49 @@ struct AnimalDetailView: View {
                 } //: LINK GROUP
                 .padding(.horizontal)
                 
+                Button {
+                           withAnimation {
+                               isAnimating.toggle()
+                               if favorites.contains(animal) {
+                                   favorites.remove(animal)
+                               } else {
+                                   favorites.add(animal)
+                               }
+                           }
+                       } label: {
+                           HStack {
+                               Image(systemName: favorites.contains(animal) ? "heart.fill" : "heart")
+                               Text(favorites.contains(animal) ? "Remove from Favorites" : "Add to Favorites")
+                           }
+                           .scaleEffect(isAnimating ? 1.2 : 1.0) // Adjust the scale factor as desired
+                       }
+                       .buttonStyle(.borderless)
+                       .padding()
+
+                
             } //: VSTACK
             .navigationBarTitle("Learn about \(animal.name)", displayMode: .inline)
+            
+          
+            
         } //:SCROLL
+        
+        
+        
     }
+    
+ 
+    
 }
 
-// MARK: - PREVIEW
+   //MARK: - PreView
 struct AnimalDetailView_Previews: PreviewProvider {
     static let animals: [Animal] = Bundle.main.decode("animals.json")
     static var previews: some View {
         NavigationView {
-            AnimalDetailView(animal: animals[0])
+            AnimalDetailView(animal: animals[1])
         }
         .previewDevice("iPhone 11 Pro")
-        
+
     }
 }

@@ -67,7 +67,8 @@ struct MotionAnimationView: View {
                 } //: LOOP
             } //: ZSTACK
             .drawingGroup()
-        } //: GEOMETRY
+        }
+        .ignoresSafeArea()//: GEOMETRY
     }
 }
 
